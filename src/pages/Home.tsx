@@ -10,12 +10,12 @@ export function Home() {
 
   function handleAddTask(newTaskTitle: string) {
     const task = {
-      id: tasks?.length + 1,
+      id: new Date().getTime(),
       title: newTaskTitle,
       done: false,
     }
 
-    setTasks([...tasks, task])
+    setTasks([...tasks, task]);
   }
 
   function handleToggleTaskDone(id: number) {
